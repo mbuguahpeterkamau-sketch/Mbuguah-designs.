@@ -3,7 +3,6 @@
 <head>
 <title>Mbuguah Designs</title>
 <link rel="stylesheet" href="style.css">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -18,11 +17,11 @@
 <span>Mbuguah Designs</span>
 </div>
 
-<a href="index.html">Home</a>
-<a href="portfolio.html">Portfolio</a>
-<a href="order.html">Order</a>
-<a href="contact.html">Contact</a>
-<a href="dashboard.html">Dashboard</a>
+<a href="index.html"><i class="fas fa-home"></i> Home</a>
+<a href="portfolio.html"><i class="fas fa-image"></i> Portfolio</a>
+<a href="order.html"><i class="fas fa-shopping-cart"></i> Order</a>
+<a href="contact.html"><i class="fas fa-phone"></i> Contact</a>
+<a href="dashboard.html"><i class="fas fa-chart-line"></i> Dashboard</a>
 
 </div>
 
@@ -30,14 +29,18 @@
 
 <section class="hero">
 <h1>Welcome to Mbuguah Designs</h1>
-<p>We create modern branding & graphic design</p>
+<p>Modern Branding & Creative Design</p>
 <a class="btn" href="order.html">Start Order</a>
-</section>
 
-<div class="card">
-<h3>Why Choose Us?</h3>
-<p>Fast delivery, quality designs, affordable pricing.</p>
+<div class="social-icons">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+<a href="#"><i class="fab fa-threads"></i></a>
 </div>
+
+</section>
 
 </div>
 
@@ -46,9 +49,31 @@
 </a>
 
 <script>
+const sidebar = document.getElementById("sidebar");
+const menuBtn = document.querySelector(".menu-btn");
+
 function toggle(){
-document.getElementById("sidebar").classList.toggle("active");
+sidebar.classList.toggle("active");
 }
+
+document.querySelectorAll(".sidebar a").forEach(link=>{
+link.addEventListener("click",()=>sidebar.classList.remove("active"));
+});
+
+document.addEventListener("click",function(e){
+if(!sidebar.contains(e.target) && !menuBtn.contains(e.target)){
+sidebar.classList.remove("active");
+}
+});
+
+const links=document.querySelectorAll(".sidebar a");
+const current=window.location.pathname.split("/").pop();
+
+links.forEach(link=>{
+if(link.getAttribute("href")===current){
+link.classList.add("active");
+}
+});
 </script>
 
 </body>
