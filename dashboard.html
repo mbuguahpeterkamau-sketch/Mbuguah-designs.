@@ -10,7 +10,6 @@
 <div class="menu-btn" onclick="toggle()">☰</div>
 
 <div class="sidebar" id="sidebar">
-
 <div class="logo-box">
 <img src="logo1.png">
 <span>Mbuguah Designs</span>
@@ -21,26 +20,19 @@
 <a href="order.html">Order</a>
 <a href="contact.html">Contact</a>
 <a href="dashboard.html">Dashboard</a>
-
 </div>
 
 <div class="main">
+<h2>Dashboard</h2>
 
-<section class="hero">
-<h2>Business Dashboard</h2>
-</section>
-
-<div class="card">
-<h3>Orders</h3>
-<p>Manual tracking system</p>
-</div>
-
-<div class="card">
-<h3>Revenue</h3>
-<p>Track payments manually</p>
-</div>
+<div class="card">Orders tracked manually</div>
+<div class="card">Revenue tracked manually</div>
 
 </div>
+
+<script>
+function toggle(){document.getElementById("sidebar").classList.toggle("active");}
+</script>
 
 </body>
 </html>
