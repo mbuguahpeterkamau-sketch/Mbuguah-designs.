@@ -27,10 +27,11 @@
 
 <div class="main">
 
-<section class="hero">
+<div class="hero">
 <h1>Welcome to Mbuguah Designs</h1>
-<p>Modern Branding & Creative Design</p>
-<a class="btn" href="order.html">Start Order</a>
+<p>Creative Branding & Graphics</p>
+
+<a href="order.html" class="btn">Start Order</a>
 
 <div class="social-icons">
 <a href="#"><i class="fab fa-facebook"></i></a>
@@ -40,7 +41,7 @@
 <a href="#"><i class="fab fa-threads"></i></a>
 </div>
 
-</section>
+</div>
 
 </div>
 
@@ -49,19 +50,17 @@
 </a>
 
 <script>
-const sidebar = document.getElementById("sidebar");
-const menuBtn = document.querySelector(".menu-btn");
+const sidebar=document.getElementById("sidebar");
+const menuBtn=document.querySelector(".menu-btn");
 
-function toggle(){
-sidebar.classList.toggle("active");
-}
+function toggle(){sidebar.classList.toggle("active");}
 
 document.querySelectorAll(".sidebar a").forEach(link=>{
 link.addEventListener("click",()=>sidebar.classList.remove("active"));
 });
 
 document.addEventListener("click",function(e){
-if(!sidebar.contains(e.target) && !menuBtn.contains(e.target)){
+if(!sidebar.contains(e.target)&&!menuBtn.contains(e.target)){
 sidebar.classList.remove("active");
 }
 });
